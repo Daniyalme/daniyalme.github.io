@@ -2,7 +2,6 @@ import profileKatakana from 'assets/katakana-profile.svg?url';
 import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import profileImg from 'assets/profile.jpg';
-import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
@@ -21,9 +20,9 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Daniyal Mehraeen" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I am Daniyal, residing in Tehran and pursuing a Master's degree in Computer
+      I am Daniyal, residing in Tehran and pursuing a Master&apos;s degree in Computer
       Engineering with a specialization in Artificial Intelligence at Amir Kabir
-      University. I hold a Bachelor's degree from Isfahan University of Technology in
+      University. I hold a Bachelor&apos;s degree from Isfahan University of Technology in
       Computer Engineering, which has equipped me with a solid foundation in the field.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
