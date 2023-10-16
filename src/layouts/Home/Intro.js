@@ -65,21 +65,31 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
             <DisplacementSphere />
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text="Hamish Williams" delay={300} />
+                <DecoderText text="Daniyal Mehraeen" delay={300} />
               </h1>
-              <Heading level={0} as="h2" className={styles.title}>
+              <Heading
+                level={0}
+                as="h2"
+                className={styles.title}
+                style={{ gap: '0.1em' }}
+              >
                 <VisuallyHidden className={styles.label}>
-                  {`Designer + ${introLabel}`}
+                  {`CS Student + ${introLabel}`}
                 </VisuallyHidden>
-                <span aria-hidden className={styles.row}>
+                <span aria-hidden className={styles.row} style={{}}>
                   <span
                     className={styles.word}
                     data-status={status}
-                    style={cssProps({ delay: tokens.base.durationXS })}
+                    style={{
+                      ...cssProps({ delay: tokens.base.durationXS }),
+                      fontSize: '0.75em',
+                      fontWeight: 700,
+                      whiteSpace: 'nowrap',
+                    }}
                   >
-                    Designer
+                    CS Student
                   </span>
-                  <span className={styles.line} data-status={status} />
+                  <span className={styles.line} data-status={status} styles={{}} />
                 </span>
                 <div className={styles.row} component="span">
                   <AnimatePresence>
@@ -96,7 +106,10 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                             className={styles.word}
                             data-plus={true}
                             data-status={status}
-                            style={cssProps({ delay: tokens.base.durationL })}
+                            style={{
+                              ...cssProps({ delay: tokens.base.durationL }),
+                              fontSize: '0.65em',
+                            }}
                           >
                             {item}
                           </span>
@@ -107,7 +120,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 </div>
               </Heading>
             </header>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#experience-1">
               <a
                 className={styles.scrollIndicator}
                 data-status={status}
@@ -117,7 +130,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
               </a>
             </RouterLink>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#experience-1">
               <a
                 className={styles.mobileScrollIndicator}
                 data-status={status}

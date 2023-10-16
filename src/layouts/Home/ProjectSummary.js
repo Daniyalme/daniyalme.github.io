@@ -23,8 +23,8 @@ export const ProjectSummary = ({
   title,
   description,
   model,
-  buttonText,
-  buttonLink,
+  buttonText = '',
+  buttonLink = '',
   alternate,
   ...rest
 }) => {
@@ -38,21 +38,21 @@ export const ProjectSummary = ({
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
-  const renderKatakana = (device, visible) => (
-    <svg
-      aria-hidden="true"
-      width="750"
-      height="137"
-      viewBox="0 0 750 137"
-      data-visible={visible}
-      data-light={theme.themeId === 'light'}
-      style={cssProps({ opacity: svgOpacity })}
-      className={styles.svg}
-      data-device={device}
-    >
-      <use href={`${projectKatakana}#katakana-project`} />
-    </svg>
-  );
+  // const renderKatakana = (device, visible) => (
+  //   <svg
+  //     aria-hidden="true"
+  //     width="750"
+  //     height="137"
+  //     viewBox="0 0 750 137"
+  //     data-visible={visible}
+  //     data-light={theme.themeId === 'light'}
+  //     style={cssProps({ opacity: svgOpacity })}
+  //     className={styles.svg}
+  //     data-device={device}
+  //   >
+  //     <use href={`${projectKatakana}#katakana-project`} />
+  //   </svg>
+  // );
 
   const renderDetails = visible => (
     <div className={styles.details}>
@@ -79,11 +79,13 @@ export const ProjectSummary = ({
       <Text className={styles.description} data-visible={visible} as="p">
         {description}
       </Text>
-      <div className={styles.button} data-visible={visible}>
-        <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
-          {buttonText}
-        </Button>
-      </div>
+      {buttonText && (
+        <div className={styles.button} data-visible={visible}>
+          <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
+            {buttonText}
+          </Button>
+        </div>
+      )}
     </div>
   );
 
@@ -91,7 +93,7 @@ export const ProjectSummary = ({
     <div className={styles.preview}>
       {model.type === 'laptop' && (
         <>
-          {renderKatakana('laptop', visible)}
+          {/* {renderKatakanaInPage && renderKatakana('laptop', visible)} */}
           <div className={styles.model} data-device="laptop">
             <Model
               alt={model.alt}
@@ -113,7 +115,7 @@ export const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible)}
+          {/* {renderKatakanaInPage && renderKatakana('phone', visible)} */}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}

@@ -18,7 +18,14 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+const disciplines = [
+  'Web Designer',
+  'Front-End Developer',
+  'Ai Engineer',
+  'Crypto Enthusiast',
+  'Game Enthusiast',
+  'Software Developer',
+];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -27,10 +34,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -68,9 +76,9 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of Hamish Williams — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Web Developer"
+        description="Portfolio of Daniyal Mehraeen — a Software / AI engineer working on web & mobile
+          apps, Ai-related project and web design."
       />
       <Intro
         id="intro"
@@ -78,14 +86,19 @@ export const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+      <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="details"
+      />
       <ProjectSummary
-        id="project-1"
+        id="experience-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
+        title="Image Proccessing and Computer Vision"
+        description="I have been working on some projects related to CV and Image Proccessing. Image Retargetting was the main point of these project."
+        buttonText="View More "
         buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
@@ -99,15 +112,13 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-2"
+        id="experience-2"
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Crypto Currencies and Web-3"
+        description="One of the recent trends in technology should defenitly be Crypto Currencies and Blockchain Platforms. I had the opputunity to explore and learn the related concepts throughout the journey of trading."
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -124,14 +135,14 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-3"
+        id="experience-3"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="Web Design and Front-End Development"
+        description="I had the great oppurtunity to work with the amazing team of Zilink as a Front-End Developer. Zilink is a web-based platform that helps people with their Link Management."
+        buttonText="View Website"
+        buttonLink="https://zil.ink"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -143,10 +154,28 @@ export const Home = () => {
           ],
         }}
       />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
+      <ProjectSummary
+        id="experience-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="Computer Hardware and Compartments"
+        description="I have a great Knowledge on the latest computer hardwares and compartment that are available in the market. I also have an experience as a computer assemble expertise throughout different projects in recent years."
+        model={{
+          type: 'phone',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [gamestackTexture, gamestackTextureLarge],
+              placeholder: gamestackTexturePlaceholder,
+            },
+            {
+              srcSet: [gamestackTexture2, gamestackTexture2Large],
+              placeholder: gamestackTexture2Placeholder,
+            },
+          ],
+        }}
       />
       <Footer />
     </div>

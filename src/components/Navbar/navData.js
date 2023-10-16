@@ -1,36 +1,32 @@
 export const navLinks = [
   {
-    label: 'Projects',
-    pathname: '/#project-1',
-  },
-  {
-    label: 'Details',
+    label: 'About',
     pathname: '/#details',
   },
   {
-    label: 'Articles',
-    pathname: '/articles',
+    label: 'Experiences',
+    pathname: '/#experience-1',
   },
   {
-    label: 'Contact',
-    pathname: '/contact',
+    label: 'Skills',
+    pathname: '/articles',
   },
 ];
 
 export const socialLinks = [
   {
-    label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
-    icon: 'twitter',
+    label: 'Linkedin',
+    url: 'https://linkedin.com/in/daniyal-mehraeen-542b38221',
+    icon: 'linkedin',
   },
   {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
+    label: 'Gmail',
+    url: 'mailto:meehraeen.daniyal@gmail.com',
+    icon: 'gmail',
   },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/Daniyalme',
     icon: 'github',
   },
 ];

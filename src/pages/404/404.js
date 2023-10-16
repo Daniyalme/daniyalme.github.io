@@ -1,5 +1,5 @@
 import notFoundPoster from 'assets/notfound.jpg';
-import notFoundVideo from 'assets/notfound.mp4';
+import notFoundVideo from 'assets/not-found.mp4';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Heading } from 'components/Heading';
@@ -67,15 +67,6 @@ export function Page404() {
               >
                 <source src={notFoundVideo} type="video/mp4" />
               </video>
-              <a
-                className={styles.credit}
-                data-visible={visible}
-                href="https://www.imdb.com/title/tt0113568/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Animation from Ghost in the Shell (1995)
-              </a>
             </div>
           </Fragment>
         )}

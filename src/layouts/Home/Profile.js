@@ -18,19 +18,28 @@ import styles from './Profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="Daniyal Mehraeen" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      I am Daniyal, residing in Tehran and pursuing a Master's degree in Computer
+      Engineering with a specialization in Artificial Intelligence at Amir Kabir
+      University. I hold a Bachelor's degree from Isfahan University of Technology in
+      Computer Engineering, which has equipped me with a solid foundation in the field.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      As an inquisitive individual with a deep passion for scientific exploration, I am
+      driven to continuously expand my knowledge and skills. My areas of keen interest
+      encompass a range of subjects, including artificial intelligence, computer hardware,
+      cryptocurrencies, and web development and design.
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I had the oppurtunity to work with the great team of{' '}
+      <Link href="https://www.zil.ink">Zilink</Link>, an online platform which is meant
+      for users that need to have Link Management, as a Front-End Developer.
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      In my spare time, I find it enjoying playing video games, as well as actively
+      participating in and watching football matches.
     </Text>
   </Fragment>
 );
@@ -55,15 +64,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
           <div className={styles.content}>
             <div className={styles.column}>
               <ProfileText visible={visible} titleId={titleId} />
-              <Button
-                secondary
-                className={styles.button}
-                data-visible={visible}
-                href="/contact"
-                icon="send"
-              >
-                Send me a message
-              </Button>
             </div>
             <div className={styles.column}>
               <div className={styles.tag} aria-hidden>
