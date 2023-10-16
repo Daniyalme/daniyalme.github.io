@@ -142,12 +142,7 @@ export const Navbar = () => {
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
-        <a
-          data-navbar-item
-          className={styles.logo}
-          aria-label="Hamish Williams, Designer"
-          onClick={handleMobileNavClick}
-        >
+        <a data-navbar-item className={styles.logo} onClick={handleMobileNavClick}>
           <Monogram highlight />
         </a>
       </RouterLink>

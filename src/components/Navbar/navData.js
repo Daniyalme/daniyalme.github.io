@@ -7,10 +7,10 @@ export const navLinks = [
     label: 'Experiences',
     pathname: '/#experience-1',
   },
-  {
-    label: 'Skills',
-    pathname: '/articles',
-  },
+  // {
+  //   label: 'Skills',
+  //   pathname: '/articles',
+  // },
 ];
 
 export const socialLinks = [

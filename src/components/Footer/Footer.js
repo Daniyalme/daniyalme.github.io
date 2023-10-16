@@ -6,16 +6,15 @@ import styles from './Footer.module.css';
 export const Footer = ({ className }) => (
   <footer className={classes(styles.footer, className)}>
     <Text size="s" align="center">
-      <span className={styles.date}>
-        {`© ${new Date().getFullYear()} All Credits Reserved. Build on Next.js`}
-      </span>
       <Link
         secondary
         className={styles.link}
         href="https://github.com/HamishMW"
         target="_self"
       >
-        Credits
+        <span className={styles.date}>
+          {`© ${new Date().getFullYear()} All Credits Reserved. Build on Next.js`}
+        </span>
       </Link>
     </Text>
   </footer>

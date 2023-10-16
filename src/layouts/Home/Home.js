@@ -10,6 +10,8 @@ import sliceTexture from 'assets/slice-app.jpg';
 import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import zilinkFront from 'assets/zilink-front.jpg';
+import zilinkBack from 'assets/zilink-back.jpg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -21,9 +23,9 @@ import styles from './Home.module.css';
 const disciplines = [
   'Web Designer',
   'Front-End Developer',
-  'Ai Engineer',
-  'Crypto Enthusiast',
   'Game Enthusiast',
+  'Ai Geek',
+  'Crypto Enthusiast',
   'Software Developer',
 ];
 
@@ -96,8 +98,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Image Proccessing and Computer Vision"
-        description="I have been working on some projects related to CV and Image Proccessing. Image Retargetting was the main point of these project."
+        title="Image Processing and Computer Vision"
+        description="I have been involved in several projects centered around computer vision (CV) and image processing. Image Retargetting was the main point of these project."
         buttonText="View More "
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -117,8 +119,8 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Crypto Currencies and Web-3"
-        description="One of the recent trends in technology should defenitly be Crypto Currencies and Blockchain Platforms. I had the opputunity to explore and learn the related concepts throughout the journey of trading."
+        title="Crypto Currencies and Web 3.0"
+        description="One of the current technology trends that stands out is definitely cryptocurrencies and blockchain platforms. I've had the chance to explore and learn a lot about these concepts while engaging in trading activities."
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -139,10 +141,8 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Web Design and Front-End Development"
-        description="I had the great oppurtunity to work with the amazing team of Zilink as a Front-End Developer. Zilink is a web-based platform that helps people with their Link Management."
-        buttonText="View Website"
-        buttonLink="https://zil.ink"
+        title="Computer Hardware and Compartments"
+        description="I possess extensive knowledge regarding the latest computer hardware components available in the market.  Additionally, I've gained valuable experience as a computer assembly specialist through my involvement in various projects over the past few years."
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -160,23 +160,26 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
-        title="Computer Hardware and Compartments"
-        description="I have a great Knowledge on the latest computer hardwares and compartment that are available in the market. I also have an experience as a computer assemble expertise throughout different projects in recent years."
+        title="Web Design and Front-End Development"
+        description="I had the privilege of collaborating with the exceptional team at Zilink as a Front-End Developer. Zilink, an innovative web-based platform, is dedicated to assisting individuals with their Link Management endeavors."
+        buttonText="View Website"
+        buttonLink="https://zil.ink"
         model={{
           type: 'phone',
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: [zilinkFront, zilinkFront],
+              placeholder: gamestackTexture2Placeholder,
             },
             {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: [zilinkBack, zilinkBack],
+              placeholder: gamestackTexturePlaceholder,
             },
           ],
         }}
       />
+
       <Footer />
     </div>
   );
