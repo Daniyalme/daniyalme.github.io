@@ -100,8 +100,8 @@ export const Home = () => {
         index={1}
         title="Image Processing and Computer Vision"
         description="I have been involved in several projects centered around computer vision (CV) and image processing. Image Retargetting was the main point of these project."
-        buttonText="View More "
-        buttonLink="/projects/smart-sparrow"
+        // buttonText="View More "
+        // buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
