@@ -1,0 +1,30 @@
+.uses {
+  --maxWidthL: var(--maxWidthM);
+}
+
+.section {
+  opacity: 0;
+  padding-top: var(--space2XL);
+  padding-bottom: var(--space2XL);
+  margin-top: var(--space2XL);
+  display: flex;
+  flex-direction: column;
+
+  &:global {
+    animation: fadeIn 1s ease 1s forwards;
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+}
+
+.title {
+  white-space: nowrap;
+  margin-bottom: var(--spaceL);
+  transition: opacity var(--durationXL) ease var(--durationM);
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+}
